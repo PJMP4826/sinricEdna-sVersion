@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/stylesDashboard.css">
+  <title>Control de Locker</title>
+  <script>
+    let lockerState = 'closed'; // Estado inicial del locker
+
+    async function controlDevice(action) {
+      try {
+        const response = await fetch(`/${action}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' }
+        });
+
+        // Cambiar la imagen según el estado
+        const lockerImage = document.getElementById('lockerImage');
+        if (action === 'turnOn') {
+          lockerImage.src = 'img/abierto.jpeg'; // Imagen del locker abierto
+          lockerState = 'open';
+        } else if (action === 'turnOff') {
+          lockerImage.src = 'img/cerrado.jpeg'; // Imagen del locker cerrado
+          lockerState = 'closed';
+        }
+      } catch (error) {
+        console.error('Error controlando el dispositivo', error);
+      }
+    }
+
+    function toggleLocker() {
+      if (lockerState === 'closed') {
+        controlDevice('turnOn');
+      } else {
+        controlDevice('turnOff');
+      }
+    }
+
+
+        // Verificar si el usuario tiene una sesión activa
+        const sessionUserId = sessionStorage.getItem('sessionUserId');
+    if (!sessionUserId) {
+        alert('No se ha encontrado el ID de usuario. Inicie sesión nuevamente.');
+        window.location.href = 'index.html'; // Redirigir a index si no hay sesión activa
+    }
+
+    function logout() {
+        sessionStorage.removeItem('sessionUserId'); // Eliminar el ID de usuario de la sesión
+        window.location.href = 'index.html'; // Redirigir al index
+    }
+  </script>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="title">Control de Locker</h1>
+    <div class="button-container">
+      <img id="lockerImage" src="img/cerrado.jpeg" alt="Locker" class="locker-image" onclick="toggleLocker()" />
+    </div>
+    <button class="btn" onclick="toggleLocker()">Alternar Estado del Locker</button>
+    <button class="btn btn-secondary" onclick="logout()">Cerrar Sesión</button>
+    <!-- Nuevo botón para redirigir a index.html -->
+    <!-- Nuevo botón para redirigir a cambiarcontraseña.html -->
+    <button class="btn btn-secondary-pink" onclick="window.location.href='cambiarcontraseña.html'">Cambiar Contraseña</button>
+  </div>
+
+</body>
+</html>

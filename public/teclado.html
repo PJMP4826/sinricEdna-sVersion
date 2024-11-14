@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teclado Numérico</title>
+    <link rel="stylesheet" href="/css/stylesTeclado.css">
+    <script src="/js/scripts.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Ingrese su Contraseña</h1>
+        <input type="text" class="display" id="passwordDisplay" readonly placeholder="Ingrese su contraseña">
+        
+        <div class="keypad">
+            <button onclick="addDigit('1')">1</button>
+            <button onclick="addDigit('2')">2</button>
+            <button onclick="addDigit('3')">3</button>
+            <button onclick="addDigit('4')">4</button>
+            <button onclick="addDigit('5')">5</button>
+            <button onclick="addDigit('6')">6</button>
+            <button onclick="addDigit('7')">7</button>
+            <button onclick="addDigit('8')">8</button>
+            <button onclick="addDigit('9')">9</button>
+            <button onclick="clearDisplay()">Clear</button>
+            <button onclick="addDigit('0')">0</button>
+            <button onclick="backspace()">←</button>
+        </div>
+
+        <button class="enter" onclick="submitPassword()">Ingresar</button>
+
+        <!-- Botón para regresar al índice -->
+        <button class="back-button" onclick="goBackToIndex()">Volver al Inicio</button>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,98 @@
+/*  INDEX  */
+
+/* Estilo general del cuerpo */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a2e; /* Fondo oscuro elegante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 10px; /* Para separar más del borde superior */
+    padding-bottom: 10px;
+}
+
+/* Contenedor principal */
+.container {
+    text-align: center;
+    background-color: #16213e;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    max-width: 350px;
+    width: 100%;
+}
+
+/* Título principal */
+h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 40px; /* Ajusta la separación */
+    margin-top: 0; /* Asegura que no tenga margen superior adicional */
+}
+
+/* Estilo para las tarjetas de usuario */
+.user-cards {
+    display: flex;
+    flex-direction: column; /* Cambia a vista vertical */
+    align-items: center; /* Centra las tarjetas */
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+/* Tarjetas de usuario */
+.user-card {
+    background-color: #0f3460;
+    padding: 20px;
+    border-radius: 15px;
+    width: 100%; /* Ajusta el ancho de la tarjeta al contenedor */
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animación al pasar el ratón (hover) */
+.user-card:hover {
+    transform: translateY(-10px) scale(1.05); /* Efecto hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Estilo de los avatares */
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    background-size: cover; /* Hace que la imagen cubra completamente el avatar */
+    background-position: center; /* Centra la imagen dentro del avatar */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+/* Avatar Fausto */
+.avatar.fausto {
+    background-image: url('https://mobbyt.com/media/gallery/6e6bfa4a9fdd3d1f1e1835107f362153/d383670b_2021-11-29-mobbyt.jpg');
+}
+
+/* Avatar Edna */
+.avatar.edna {
+    background-image: url('https://i.pinimg.com/736x/a5/62/e7/a562e7738c95127eb7e2ee96bdaf41bd.jpg');
+}
+
+/* Avatar Hoil */
+.avatar.hoil {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRttp1b2H8GAK4OBuSbE6TvtYX7adf6vj6gD5NpaQ7sPXKH7qe4U4BS7Wn3wJPvEDmDq2A&usqp=CAU');
+}
+
+/* Estilo para los textos dentro de la tarjeta */
+.user-card h2 {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.user-card p {
+    color: #b0c7e4;
+}

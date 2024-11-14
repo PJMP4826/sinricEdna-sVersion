@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecciona un Usuario</title>
+    <link rel="stylesheet" href="/css/stylesIndex.css">
+    <!--<script src="/js/scripts.js" defer></script>-->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="./img/caja-fuerte.ico">
+</head>
+<body>
+    <div class="container">
+        <h1>SELECCIONA TU PERFIL</h1>
+        <div class="user-cards">
+            <div class="user-card" onclick="selectUser(1)">
+                <div class="avatar fausto"></div>
+                <h2>Fausto</h2>
+                
+            </div>
+            <div class="user-card" onclick="selectUser(2)">
+                <div class="avatar edna"></div>
+                <h2>Edna</h2>
+                
+            </div>
+            <div class="user-card" onclick="selectUser(3)">
+                <div class="avatar hoil"></div>
+                <h2>Miguel (Hoil) </h2>
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function selectUser(userId) {
+            localStorage.setItem('selectedUserId', userId);
+            window.location.href = 'teclado.html';
+        }
+    </script>
+</body>
+</html>
