@@ -14,7 +14,7 @@ app.use('/api/auth', authRoutes);  // Ruta que usa el archivo 'authRoutes.js'
 
 // Configuración de la API de Sinric Pro
 const API_KEY = 'fb9e9e90-6c91-45d4-9fcf-0031bb370b5c';
-let accessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MDYwZTVlZGVkZGVjZTM0YmFhMTI3NiIsInRpZCI6IjY3MzAwNmJjOGYzY2M1MTdlYjE0NTY4ZSIsImlhdCI6MTczMTIwMDcwMCwiZXhwIjoxNzMxODA1NTAwfQ.NSuBgpKXi42tRb4vRS33DzxfTmLyzV1eptj-7QTdsaw'; // Token obtenido previamente
+let accessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MDYwZTVlZGVkZGVjZTM0YmFhMTI3NiIsInRpZCI6IjY3NGE0NjU0ODkxNmQ2YjgwYTI2NTdhMiIsImlhdCI6MTczMjkyMDkxNiwiZXhwIjoxNzMzNTI1NzE2fQ.kuLZc4O1jsXXW1hmxNvQq3TdVaPvKbQC4kkdpGjThSo'; // Token obtenido previamente
 const DEVICE_ID = '67060f670d73840bd1d70018';
 
 // Ruta para obtener el accessToken
