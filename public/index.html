@@ -37,18 +37,7 @@
       }
     }
 
-
-        // Verificar si el usuario tiene una sesión activa
-        const sessionUserId = sessionStorage.getItem('sessionUserId');
-    if (!sessionUserId) {
-        alert('No se ha encontrado el ID de usuario. Inicie sesión nuevamente.');
-        window.location.href = 'index.html'; // Redirigir a index si no hay sesión activa
-    }
-
-    function logout() {
-        sessionStorage.removeItem('sessionUserId'); // Eliminar el ID de usuario de la sesión
-        window.location.href = 'index.html'; // Redirigir al index
-    }
+  
   </script>
 </head>
 <body>
